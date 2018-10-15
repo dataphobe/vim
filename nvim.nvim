@@ -26,6 +26,7 @@ Plug 'thaerkh/vim-indentguides'
 Plug 'derekwyatt/vim-scala'
 Plug 'scrooloose/nerdcommenter'
 Plug 'terryma/vim-multiple-cursors'
+Plug '/usr/local/opt/fzf'
 call plug#end()
 
 " End of plugins.vim
@@ -104,5 +105,3 @@ let g:syntastic_check_on_wq = 0
 let g:airline_powerline_fonts = 1
 " End of plugin_setting.vim
 
-" If fzf is installed using Homebrew
-set rtp+=/usr/local/opt/fzf
