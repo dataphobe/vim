@@ -19,7 +19,7 @@ endif
 
 Plug 'lervag/vimtex'
 Plug 'brennier/quicktex'
-
+Plug 'terryma/vim-expand-region'
 " indentations
 " Plug 'nathanaelkane/vim-indent-guides'
 Plug 'thaerkh/vim-indentguides'
