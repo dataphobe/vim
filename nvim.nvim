@@ -29,6 +29,13 @@ Plug 'terryma/vim-multiple-cursors'
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'terryma/vim-expand-region'
+" These two are for distraction free writing 
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
+" Bring unix commands to vim
+Plug 'tpope/vim-eunuch'
+" surrounding stuff 
+Plug 'tpope/vim-surround'
 
 call plug#end()
 
@@ -106,5 +113,18 @@ let g:syntastic_check_on_wq = 0
 
 " Airline configs
 let g:airline_powerline_fonts = 1
+
+
+function! s:goyo_enter()
+  Limelight
+endfunction
+
+function! s:goyo_leave()
+  Limelight!
+endfunction
+
+autocmd! User GoyoEnter nested call <SID>goyo_enter()
+autocmd! User GoyoLeave nested call <SID>goyo_leave()
+
 " End of plugin_setting.vim
 
