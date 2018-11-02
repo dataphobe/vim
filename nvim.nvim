@@ -1,6 +1,15 @@
 
 command! ReSource :so ~/.config/nvim/init.vim
 
+function! BuildComposer(info)
+  if a:info.status != 'unchanged' || a:info.force
+    if has('nvim')
+      !cargo build --release
+    else
+      !cargo build --release --no-default-features --features json-rpc
+    endif
+  endif
+endfunction
 
 " Beging plugins.vim file
 call plug#begin('~/.local/share/nvim/plugged')
@@ -36,6 +45,8 @@ Plug 'junegunn/limelight.vim'
 Plug 'tpope/vim-eunuch'
 " surrounding stuff 
 Plug 'tpope/vim-surround'
+" markdown preview
+Plug 'euclio/vim-markdown-composer', { 'do': function('BuildComposer') }
 
 call plug#end()
 
