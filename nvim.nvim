@@ -47,6 +47,7 @@ Plug 'junegunn/limelight.vim'
 Plug 'tpope/vim-eunuch'
 " surrounding stuff 
 Plug 'tpope/vim-surround'
+Plug 'dhruvasagar/vim-table-mode'
 " markdown preview
 Plug 'euclio/vim-markdown-composer', { 'do': function('BuildComposer') }
 
